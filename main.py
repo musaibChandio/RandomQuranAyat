@@ -62,4 +62,16 @@ def main():
 
     arabic, translation = result
 
+    print(f"Surah: {arabic['surah']['englishName']} ({arabic['surah']['name']})")
+    print(f"Surah Number: {arabic['surah']['number']}")
+    print(f"Ayah Number: {arabic['numberInSurah']}")
+    print("-" * 40)
+    print(f"Arabic: {arabic['text']}")
+    print(f"{lang}: {translation['text']}")
+    print("-" * 40)
+    
+    if __name__ == "__main__":
+        main()
+    
+
 
