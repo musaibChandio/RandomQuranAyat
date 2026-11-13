@@ -32,4 +32,34 @@ def get_random_ayah(edition):
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
         return None
+    
+
+
+def main():
+    print("=== Verse of the Day ===")
+    print("1. English")
+    print("2. Urdu")
+
+    choice = input("Konsi translation chahiye? 1 ya 2 likho: ")
+    if choice == "2":
+        edition = "ur.junagarhi"
+        lang = "Urdu"
+    elif choice == "1":
+        edition = "en.asad"
+        lang = "English"
+    else:
+        print("Invalid choice! 1 ya 2 select karo.")
+        return
+        
+
+    print(f"\n{lang} me Ayat la raha hun...\n")
+
+    result = get_random_ayah(edition)
+
+    if result is None:
+        print("Maaf karo, ayat nahi mil saki.")
+        return
+
+    arabic, translation = result
+
 
