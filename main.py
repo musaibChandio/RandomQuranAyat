@@ -70,7 +70,7 @@ def main():
     print(f"{lang}: {translation['text']}")
     print("-" * 40)
     
-    if __name__ == "__main__":
+if __name__ == "__main__":
         main()
     
 
